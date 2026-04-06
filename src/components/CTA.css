@@ -1,0 +1,32 @@
+.cta-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--color-bg-primary);
+}
+
+.cta-block {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: 5rem 2rem;
+}
+
+.cta-desc {
+  max-width: 60ch;
+  color: var(--color-text-secondary);
+}
+
+.cta-btn {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.125rem;
+  padding: 1.25rem 2.5rem;
+}
+
+.cta-disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin: 0 auto;
+}
