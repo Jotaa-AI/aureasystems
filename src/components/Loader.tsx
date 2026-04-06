@@ -7,7 +7,6 @@ interface LoaderProps {
 
 const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
-  const brandName = "AUREA SYSTEMS".split("");
 
   useEffect(() => {
     // Exact 3 seconds of animation before starting fade out
@@ -25,18 +24,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   return (
     <div className={`loader-container ${isFadingOut ? 'fade-out' : ''}`}>
       <div className="loader-logo">
-        {brandName.map((char, index) => (
-          <span 
-            key={index} 
-            className="loader-char" 
-            style={{ 
-              animationDelay: `${0.1 + (index * 0.15)}s`,
-              marginRight: char === " " ? "1rem" : "0"
-            }}
-          >
-            {char}
-          </span>
-        ))}
+        <img src="https://assets.cdn.filesafe.space/ju5vSpTX0hpH3uI8cPSE/media/69d3aa6f4cde4bbc2a007b40.png" alt="Aurea Systems" className="loader-logo-img" />
       </div>
       <div className="loader-progress-bar">
         <div className="loader-progress-fill"></div>

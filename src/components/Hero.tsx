@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 interface HeroProps {
@@ -7,19 +7,12 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   const [phase, setPhase] = useState<'initial' | 'revealing' | 'done'>('initial');
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const revealTimer = setTimeout(() => setPhase('revealing'), 400);
     const doneTimer = setTimeout(() => setPhase('done'), 2200);
     return () => { clearTimeout(revealTimer); clearTimeout(doneTimer); };
   }, []);
-
-  useEffect(() => {
-    if (phase === 'done' && videoRef.current) {
-      videoRef.current.play();
-    }
-  }, [phase]);
 
   const isRevealed = phase === 'revealing' || phase === 'done';
 
@@ -52,12 +45,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         <div className="hero-right">
           <div className="hero-visual-container">
             <div className="hero-image-wrapper">
-              <video
-                ref={videoRef}
-                src="https://assets.cdn.filesafe.space/ju5vSpTX0hpH3uI8cPSE/media/69d3812aa7dcb4cff0d7d74e.mp4"
-                className="hero-video"
-                muted
-                playsInline
+              <img
+                src="/hero-person.png"
+                alt="Profesional de clínica"
+                className="hero-image"
               />
             </div>
             <div className={`hero-scroll-indicator ${isRevealed ? 'revealed' : ''}`}>

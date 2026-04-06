@@ -17,8 +17,7 @@ const Header: React.FC = () => {
     <header className={`app-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <a href="#" className="brand-logo">
-          <span className="brand-light">AUREA</span>
-          <span className="brand-bold">SYSTEMS</span>
+          <img src="https://assets.cdn.filesafe.space/ju5vSpTX0hpH3uI8cPSE/media/69d3aa6f4cde4bbc2a007b40.png" alt="Aurea Systems" className="brand-logo-img" />
         </a>
       </div>
     </header>

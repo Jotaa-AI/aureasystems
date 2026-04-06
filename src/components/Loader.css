@@ -20,27 +20,19 @@
 }
 
 .loader-logo {
-  font-family: var(--font-family-base);
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 300;
-  letter-spacing: 0.25em;
-  color: var(--color-text-primary);
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 3rem;
 }
 
-.loader-char {
-  display: inline-block;
+.loader-logo-img {
+  height: clamp(30px, 5vw, 50px);
+  width: auto;
   opacity: 0;
-  /* Blur base filter for premium feeling */
   filter: blur(4px);
   transform: translateY(10px);
-  animation: revealChar 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-}
-
-/* We style specific characters to make the logo look branded (e.g. bolding SYSTEMS) */
-.loader-char:nth-child(n+7) {
-  font-weight: 600;
+  animation: revealChar 1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s forwards;
 }
 
 .loader-progress-bar {

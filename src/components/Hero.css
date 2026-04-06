@@ -15,7 +15,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 38%, #DFD8FC 38%, #DFD8FC 100%);
+  background: #DFD8FC;
   transform: translateY(100%);
   transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
@@ -29,6 +29,7 @@
   .hero-split {
     flex-direction: row;
     min-height: 100vh;
+    background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 30%, #DFD8FC 30%, #DFD8FC 100%);
   }
 }
 
@@ -65,17 +66,19 @@
 /* --- Left Side --- */
 
 .hero-left {
-  flex: 0.8;
+  flex: none;
   display: flex;
   align-items: center;
-  padding: 8rem 2rem 4rem 2rem;
-  background-color: transparent;
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  background-color: #FFFFFF;
 }
 
 @media (min-width: 992px) {
   .hero-left {
+    flex: 0.6;
     padding: 0;
-    padding-left: 8vw;
+    padding-left: 5vw;
+    background-color: transparent;
   }
 }
 
@@ -86,17 +89,36 @@
 
 .h1-huge {
   font-family: var(--font-primary);
-  font-size: clamp(2.8rem, 5vw, 5.5rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
+  font-size: clamp(2.4rem, 8vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   font-weight: 300;
   color: var(--color-text-primary);
   margin: 0;
-  padding-right: 2rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .h1-huge {
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    padding-right: 2rem;
+  }
 }
 
 .h1-huge strong {
   font-weight: 600;
+}
+
+.hero-subtitle {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #666;
+  margin-top: 1.2rem;
+  max-width: 100%;
 }
 
 .hero-subtitle strong {
@@ -104,18 +126,22 @@
   color: var(--color-text-primary);
 }
 
-.hero-subtitle {
-  font-family: var(--font-primary);
-  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
-  line-height: 1.5;
-  font-weight: 400;
-  color: #666;
-  margin-top: 1.5rem;
-  max-width: clamp(250px, 29vw, 420px);
+@media (min-width: 992px) {
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    margin-top: 1.5rem;
+    max-width: clamp(250px, 29vw, 420px);
+  }
 }
 
 .mt-8 {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .mt-8 {
+    margin-top: 2.5rem;
+  }
 }
 
 /* --- CTA Button --- */
@@ -131,6 +157,14 @@
   color: var(--color-text-primary);
   font-weight: 500;
   animation: btn-pulse 2s ease-in-out infinite;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .hero-ctas .btn-primary {
+    width: auto;
+  }
 }
 
 .hero-ctas .btn-primary:hover {
@@ -147,60 +181,75 @@
 /* --- Right Side --- */
 
 .hero-right {
-  flex: 1.2;
+  flex: none;
   background-color: transparent;
   display: flex;
   align-items: stretch;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 0;
   position: relative;
+  min-height: 50vh;
 }
 
 @media (min-width: 992px) {
   .hero-right {
+    flex: 1.4;
+    justify-content: flex-end;
     min-height: 100vh;
   }
 }
 
 .hero-visual-container {
   width: 100%;
-  height: 100%;
   position: relative;
+  min-height: 50vh;
+}
+
+@media (min-width: 992px) {
+  .hero-visual-container {
+    min-height: 100vh;
+  }
 }
 
 .hero-image-wrapper {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
-  width: 100%;
-  height: 100vh;
+  bottom: 0;
   overflow: hidden;
   background: #DFD8FC;
 }
 
-.hero-video {
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 40% center;
+  object-position: center top;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /* --- Scroll Indicator --- */
 
 .hero-scroll-indicator {
   position: absolute;
-  bottom: 2.5rem;
-  right: 2.5rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   color: var(--color-text-primary);
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   transition-delay: 1.8s;
   z-index: 20;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .hero-scroll-indicator {
+    display: block;
+    bottom: 2.5rem;
+    right: 2.5rem;
+  }
 }
 
 .hero-scroll-indicator.revealed {
