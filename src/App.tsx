@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import CredibilityStrip from './components/CredibilityStrip';
 import ProblemSection from './components/ProblemSection';
 import MechanismSection from './components/MechanismSection';
+import GrowthSimulator from './components/GrowthSimulator';
 import Transformation from './components/Transformation';
 import Features from './components/Features';
 import Guarantee from './components/Guarantee';
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         <CredibilityStrip />
         <ProblemSection />
         <MechanismSection />
+        <GrowthSimulator onOpenModal={handleOpenBookingModal} />
         <Transformation />
         <Features />
         <Guarantee />
