@@ -52,8 +52,8 @@ export const SCENARIOS: Record<ScenarioKey, ScenarioDefinition> = {
     shortLabel: 'Prudente',
     eyebrow: 'Más prudente',
     description: 'Lectura prudente con más margen.',
-    cpl: 16,
-    qualificationRate: 0.5,
+    cpl: 30,
+    qualificationRate: 0.25,
     averageRecoveryWindowDays: 45,
   },
   expected: {
@@ -62,8 +62,8 @@ export const SCENARIOS: Record<ScenarioKey, ScenarioDefinition> = {
     shortLabel: 'Referencia',
     eyebrow: 'Escenario base',
     description: 'La referencia más realista.',
-    cpl: 12,
-    qualificationRate: 0.6,
+    cpl: 22,
+    qualificationRate: 0.35,
     averageRecoveryWindowDays: 30,
   },
   optimistic: {
@@ -72,8 +72,8 @@ export const SCENARIOS: Record<ScenarioKey, ScenarioDefinition> = {
     shortLabel: 'Acelerado',
     eyebrow: 'Mayor eficiencia',
     description: 'Escenario ágil con mejor eficiencia.',
-    cpl: 9,
-    qualificationRate: 0.7,
+    cpl: 15,
+    qualificationRate: 0.45,
     averageRecoveryWindowDays: 21,
   },
 };

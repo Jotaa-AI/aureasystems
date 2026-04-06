@@ -32,10 +32,10 @@ const Guarantee: React.FC = () => {
             <div className="guarantee-clause highlight-clause">
               <div className="clause-header">
                 <Fingerprint size={20} className="clause-icon" />
-                <h3>Garantía de Rendimiento Condicional</h3>
+                <h3>Garantía de Devolución Total</h3>
               </div>
               <p>
-                Si inviertes un mínimo de 800€/mes en publicidad, tu equipo usa y responde siguiendo nuestros protocolos, y aun así no generamos valoraciones cualificadas en 30 días, <strong>seguiremos trabajando sin coste de gestión hasta cumplir el objetivo acordado.</strong>
+                Si no recuperas tu inversión en menos de <strong>30 días</strong>, te devolvemos el dinero. Sin letra pequeña, sin condiciones ocultas. <strong>Firmado por contrato.</strong>
               </p>
             </div>
 
